@@ -30,7 +30,7 @@ sap.ui.define([
 					},
 					iPressOnTheItemWithTheID: function(id) {
 						return this.waitFor({
-							id: sTableId,
+							controlType: "sap.m.ColumnListItem",
 							viewName: sViewName,
 							matchers: new BindingPath({ path: `/Posts('${id}')`}),
 							actions: new Press(),

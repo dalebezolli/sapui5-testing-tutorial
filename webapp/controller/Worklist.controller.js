@@ -78,6 +78,11 @@ sap.ui.define([
 			}
 			this.getModel("worklistView").setProperty("/worklistTableTitle", sTitle);
 		},
+		onPress: function(event) {
+			this.getRouter().navTo("post", {
+				postId: event.getSource().getBindingContext().getProperty("PostID")
+			});
+		},
 
 		/* =========================================================== */
 		/* internal methods                                            */
