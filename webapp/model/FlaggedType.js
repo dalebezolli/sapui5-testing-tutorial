@@ -4,14 +4,14 @@ sap.ui.define([
     "use strict";
 
     return SimpleType.extend("sap.ui.demo.bulletinboard.model.FlaggedType", {
-        formatValue: function() {
-            
+        formatValue: function(flagged) {
+            return flagged === 1;
         },
-        parseValue: function() {
-
+        parseValue: function(flagged) {
+            return flagged ? 1 : 0;
         },
         validateValue: function() {
-
+            return true;
         }
     });
 });

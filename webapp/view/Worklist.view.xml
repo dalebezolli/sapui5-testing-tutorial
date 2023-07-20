@@ -35,6 +35,7 @@
 					<Column width="33%" id="unitNumberColumn" hAlign="End">
 						<Text text="{i18n>TableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
 					</Column>
+					<Column width="80px" id="flaggedColumn" demandPopin="true" vAlign="Middle" />
 				</columns>
 				<items>
 					<ColumnListItem vAlign="Middle">
@@ -54,6 +55,15 @@
 									formatter: '.formatter.priceState'
 								}"
 								/>
+							<ToggleButton 
+								id="flaggedButton"
+								tooltip="{i18n>flaggedTooltip}"
+								icon="sap-icon://flag"
+								pressed="{
+									path: 'Flagged',
+									type: '.types.flagged'
+								}"
+								class="sapUiMediumMarginBeginEnd" />
 						</cells>
 					</ColumnListItem>
 				</items>

@@ -10,6 +10,7 @@ sap.ui.define([
         init: function() {
             UIComponent.prototype.init.apply(this, arguments);
 
+            this.getModel().setDefaultBindingMode("TwoWay");
             this.setModel(models.createDeviceModel(), "device");
             this.getRouter().initialize();
         }

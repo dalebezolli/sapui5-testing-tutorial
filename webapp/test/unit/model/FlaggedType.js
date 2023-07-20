@@ -19,7 +19,7 @@ sap.ui.define([ "sap/ui/demo/bulletinboard/model/FlaggedType" ], function(Flagge
     });
 
     QUnit.test("Should parse true to 1", function(assert) {
-        const parseValue = new FlaggedType().parseValue(false);
+        const parsedValue = new FlaggedType().parseValue(true);
         assert.strictEqual(parsedValue, 1, "The parsing conversion was correct");
     });
 
