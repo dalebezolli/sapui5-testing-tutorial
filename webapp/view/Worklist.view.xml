@@ -49,6 +49,7 @@
 									formatter: '.formatter.numberUnit'
 								}"
 								unit="{Currency}"
+								state="Error"
 								/>
 						</cells>
 					</ColumnListItem>
