@@ -19,7 +19,7 @@ sap.ui.define([
     });
 
     opaTest("Should be on the post page when the browser's forward button is pressed", function(Given, When, Then) {
-        When.onTheBrowser.iPRessOnTheForwardButton();
+        When.onTheBrowser.iPressOnTheForwardButton();
         Then.onThePostPage.theTitleShouldDisplayTheName("Jeans");
         Then.iTeardownMyApp();
     });

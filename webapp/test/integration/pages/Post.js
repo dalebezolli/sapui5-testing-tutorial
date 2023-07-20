@@ -13,7 +13,7 @@ sap.ui.define([
                     return this.waitFor({
                         id: "page",
                         viewName: viewName,
-                        acitons: new Press(),
+                        actions: new Press(),
                         errorMessage: "Did not find the nav button on object page"
                     });
                 }
@@ -25,7 +25,7 @@ sap.ui.define([
                             return this.waitFor({
                                 id: "objectHeader",
                                 viewName: viewName,
-                                mathers: new Properties({ title: name }),
+                                matchers: new Properties({ title: name }),
                                 success: function(page) { 
                                     Opa5.assert.ok(true, "was on the remembered detail page");
                                 },
