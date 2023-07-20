@@ -16,8 +16,16 @@ sap.ui.define([], function () {
 
 			return parseFloat(sValue).toFixed(2);
 		},
-		priceState: function() {
-
+		priceState: function(price) {
+			if(price < 50) {
+				return "Success";
+			} else if(price < 250) {
+				return "None";
+			} else if(price < 2000) {
+				return "Warning";
+			} else {
+				return "Error";
+			}
 		}
 
 	};

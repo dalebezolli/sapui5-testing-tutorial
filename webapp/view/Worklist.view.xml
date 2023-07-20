@@ -49,7 +49,10 @@
 									formatter: '.formatter.numberUnit'
 								}"
 								unit="{Currency}"
-								state="Error"
+								state="{
+									path: 'Price',
+									formatter: '.formatter.priceState'
+								}"
 								/>
 						</cells>
 					</ColumnListItem>
