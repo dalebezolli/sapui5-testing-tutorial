@@ -16,6 +16,15 @@ sap.ui.define([
                         actions: new Press(),
                         errorMessage: "Did not find the nav button on object page"
                     });
+                },
+                iPressOnTheTabWithTheKey: function(key) {
+                    return this.waitFor({
+                        controlType: "sap.m.IconTabFilter",
+                        viewName: viewName,
+                        matchers: new Properties({ key }),
+                        actions: new Press(),
+                        errorMessage: "Cannot find the icon tab bar"
+                    });
                 }
             },
             assertions: {
@@ -32,6 +41,16 @@ sap.ui.define([
                                 errorMessage: `The post ${name} is not shown`
                             });
                         }
+                    });
+                },
+                iShouldSeeTheViewCounter: function() {
+                    return this.waitFor({
+                        id: "viewCounter",
+                        viewName: viewName,
+                        success: function() {
+                            Opa5.assert.ok(true, "The view counter was visible");
+                        },
+                        errorMessage: "The view counter could not be found"
                     });
                 }
             }

@@ -21,6 +21,10 @@ sap.ui.define([
     opaTest("Should be on the post page when the browser's forward button is pressed", function(Given, When, Then) {
         When.onTheBrowser.iPressOnTheForwardButton();
         Then.onThePostPage.theTitleShouldDisplayTheName("Jeans");
-        Then.iTeardownMyApp();
+    });
+
+    opaTest("Should select the statistics tab", function(Given, When, Then) {
+        When.onThePostPage.iPressOnTheTabWithTheKey("statistics");
+        Then.onThePostPage.iShouldSeeTheViewCounter().and.iTeardownMyApp();
     });
 });
